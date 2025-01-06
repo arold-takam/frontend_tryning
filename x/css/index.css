@@ -1,0 +1,314 @@
+/* <uniquifier>: Use a unique and descriptive class name
+ <weight>: Use a value from 100 to 900 */
+
+.roboto-slab-medium {
+  font-family: "Roboto Slab", serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: black;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 90vh;
+}
+
+figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 100%;
+    margin-right: 5vw;
+}
+
+figure img{
+    width: auto;
+    height: 90%;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 55%;
+    height: 100%;
+}
+
+section h1{
+    font-size: 5rem;
+    font-weight: bolder;
+    color: white;
+    width: 30rem;
+    margin-bottom: 2rem;
+}
+
+#ident{
+    width: 25rem;
+    height: 50%;
+}
+
+#ident h2{
+    font-size: xx-large;
+    font-weight: bolde;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+#ident .btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 18rem;
+    margin-bottom: 1rem;
+}
+
+#ident .btn .bt1{
+    display: flex;
+    /* justify-content: space-evenly;
+    align-items: center; */
+    column-gap: 1rem;
+    background-color: white;
+    border: none;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#ident .btn .bt1 .im{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+#ident .btn .bt1 .im img{
+    width: auto;
+    height: 100%;
+}
+
+#ident .btn .bt1 figcaption{
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.685);
+}
+
+/* button 2 */
+
+#ident .btn button{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+    border: none;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem 2rem;
+    margin-bottom: 0.5rem;
+}
+
+#ident .btn button .im{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+#ident .btn button .im img{
+    width: auto;
+    height: 100%;
+}
+
+#ident .btn button figcaption{
+    font-size: small;
+    color: rgba(0, 0, 0, 0.685);
+}
+
+#ident .btn button #mac{
+    font-size: 0.9rem;
+    color: black;
+}
+
+#ident #line{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18rem;
+    height: 0.05rem;
+    background-color: rgba(255, 255, 255, 0.705);
+    margin-bottom: 1rem;
+}
+
+#ident #line p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 2rem;
+    color: white;
+    background-color: black;
+}
+
+#ident button{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: large;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem 2rem;
+    margin-bottom: 0.5rem;
+    width: 18rem;
+    background-color: #1DA1F2;
+}
+
+#ident span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18rem;
+}
+
+#ident span p{
+    text-align: left;
+    color: white;
+    font-size: x-small;
+}
+
+#con h3{
+    color: white;
+    margin-bottom: 1rem;
+}
+
+#con a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18rem;
+    font-weight: bold;
+    color: #1DA1F2;
+    text-decoration: none;
+    border: 0.5px solid #1DA1F2;
+    border-radius: 1.5rem;
+    padding: 0.5rem 2rem;
+}
+
+#con a:hover{
+    background-color: rgba(255, 255, 255, 0.062);
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 10vh;
+}
+
+footer ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    list-style: none;
+    padding: 0 2rem;
+}
+
+footer ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: small;
+    margin-right: 1rem;
+}
+
+footer ul li a{
+    font-weight: lighter;
+    color: rgba(255, 255, 255, 0.836);
+    text-decoration: none;
+}
+
+/* -----------------------------GESTION DU RESPONSIVE----------------------- */
+
+@media(max-width: 1024px){
+    figure{
+        position: relative;
+        left: -5rem;
+        align-items: center;
+        width: 20%;
+        height: 60%;
+        padding-left: 3rem;
+    }
+    
+    figure img{
+        width: auto;
+        height: 80%;
+    }
+
+    section{
+        width: 60%;
+    }
+}
+
+@media(max-width: 768px){
+    main{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    figure{
+        padding: 0 4rem;
+        top: 1rem;
+        width: 10rem;
+        height: 10rem;
+    }
+
+    section h1{
+        position: relative;
+        top: -1rem;
+        font-size: 4rem;
+        font-weight: bolder;
+        color: white;
+        width: 30rem;
+        margin-bottom: 0rem;
+    }
+}
+
+@media(max-width: 425px){
+    figure{
+        padding: 5rem;
+        top: 1rem;
+        width: 10rem;
+        height: 10rem;
+    }
+
+    section h1{
+        position: relative;
+        top: -1rem;
+        font-size: 2rem;
+        font-weight: bolder;
+        color: white;
+        width: 13rem;
+        margin-bottom: 0rem;
+    }
+}
+
+
