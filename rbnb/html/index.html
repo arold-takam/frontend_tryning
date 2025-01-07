@@ -4,14 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Airbnb.com</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+          rel="stylesheet">
     <link rel="stylesheet" href="../css/index.css">
-    <script src="../js/index.js"></script>
+    <script type="module" src="../js/index.js" defer></script>
 </head>
 <body>
-    <header></header>
-    <main>
-        <nav></nav>
-    </main>
-    <footer></footer>
+<header></header>
+<main>
+    <nav></nav>
+    <div id="container" class="container"></div>
+</main>
+<footer></footer>
+<template id="card-template">
+    <div class="card">
+        <div class="card-carousel">
+            <div class="card-carousel-items">
+                <div class="card-image">
+                    <img src="../images/card-image1.avif" alt="One image">
+                </div>
+                <div class="card-image">
+                    <img src="../images/card-image2.avif" alt="One image">
+                </div>
+                <div class="card-image">
+                    <img src="../images/card-image3.avif" alt="One image">
+                </div>
+                <div class="card-image">
+                    <img src="../images/card-image4.avif" alt="One image">
+                </div>
+                <div class="card-image">
+                    <img src="../images/card-image5.avif" alt="One image">
+                </div>
+
+            </div>
+            <div class="overlay">
+                <div class="overlay-top">
+                    <div class="overlay-top-left"><strong>Guest
+                        favorite</strong></div>
+                    <button class="btn-like overlay-top-right">
+                        <i class="fas fa-heart liked"></i>
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+                <div class="overlay-navigation">
+                    <button class="btn-previous"><i
+                            class="fas fa-chevron-left"></i></button>
+                    <button class="btn-next"><i
+                            class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="overlay-carousel-indicator"></div>
+            </div>
+        </div>
+        <div class="card-info">
+            <div>
+                <div class="card-info-location"><strong>Location</strong></div>
+                <div class="card-info-distance">Distance</div>
+                <div class="card-info-period">Period</div>
+            </div>
+            <div class="card-info-ranking"><i class="fas fa-star"></i>
+                <span>Ranking</span></div>
+            <div class="card-info-price"><strong>Price</strong> night</div>
+        </div>
+    </div>
+</template>
 </body>
 </html>
