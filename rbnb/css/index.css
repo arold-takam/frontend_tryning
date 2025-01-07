@@ -1,0 +1,226 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+img{
+    display: block;
+}
+
+header{
+    /* background-color: yellow; */
+    padding: 1rem 5rem;
+}
+
+.toph{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.toph figure{
+    width: 30%;
+}
+
+.toph figure a{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+    width: 10rem;
+}
+
+.toph figure a .im{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    margin-right: 0.1rem;
+}
+
+.toph figure a figcaption{
+    color: #ff5a5f;
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+.toph ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    list-style: none;
+}
+
+.toph ul li {
+    margin: 0 1.5rem;
+}
+
+.toph ul li .p{
+    color: #484848;
+    transition: all 0.1s ease-in-out;
+}
+
+.toph ul li:hover .p{
+    padding: 1rem;
+    border-radius: 24px;
+    background-color: #48484813;
+}
+
+.toph .right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}*
+
+.toph .right p{
+    color: #484848;
+    transition: all 0.5s ease-in-out;
+}
+
+.toph .right p:hover{
+    color: black;
+    font-weight: bold;
+}
+
+.toph .right figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    margin: 0 2rem;
+}
+
+.toph .right figure img{
+    width: auto;
+    height: 100%;
+}
+
+.toph .right button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 86px;
+    height: 48px;
+    border-radius: 24px;
+    border: 0.01rem solid #4848484b;
+    background-color: white;
+    padding: 0.3rem 0;
+}
+
+.toph .right button figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    margin: 0 0.5rem;
+}
+
+.toph .right button figure img{
+    width: auto;
+    height: 100%;
+}
+
+.toph .right button .im{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    margin: 0 0.5rem;
+}
+
+.toph .right button .im img{
+    width: auto;
+    height: 100%;
+}
+
+.botomh{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botomh ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 60rem;
+    list-style: none;
+    border-radius: 32px;
+    border: 0.01rem solid #484848;
+    padding: 0.5rem 0;
+}
+
+.botomh ul li{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 25%;
+    height: 100%;
+    border-right: 1px solid #484848;
+    /* background-color: greenyellow; */
+}
+
+.botomh ul li label{
+    font-weight: bold;
+    margin: 0.5rem 2rem;
+}
+
+.botomh ul li input{
+    font-size: medium;
+    color: #484848;
+    border: none;
+    margin: 0 2rem;
+}
+
+.botomh ul li h1{
+    font-size: medium;
+    margin: 0.5rem 2rem;
+}
+
+.botomh ul li p{
+    color: #484848;
+    margin: 0 2rem;
+}
+
+ul #loop{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 25%;
+}
+
+.botomh ul li figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    margin: 0 0.5rem;
+    background-color: #ff5a5f;
+    border-radius: 32px;
+}
+
+.botomh ul li figure img{
+    width: auto;
+    height: 50%;
+}
+
+
+
+main{
+    width: 100vw;
+    height: 70vh;
+    background-color: aqua;
+}
+
