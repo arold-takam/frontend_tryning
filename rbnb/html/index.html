@@ -13,45 +13,92 @@
 <header></header>
 <main>
     <nav></nav>
-    <div id="container" class="container"></div>
+    <div id="cards-container" class="cards-container"></div>
 </main>
 <footer>
-    <h2>Inspiration for future getaways</h2>
-    <ul>
-        <li>
-            <button>Popular</button>
-            <ul>
-                <li>
-                    <a href="#">
-                        <span><strong>Marbella</strong></span>
-                        <span>Cottage rentals</span>
-                    </a>
+    <section class="footer-inspiration-section">
+        <h2 class="footer-inspiration-title">Inspiration for Future
+            Getaways</h2>
+    </section>
+    <hr>
+    <section class="footer-info-section">
+        <div class="footer-info-column">
+            <h3 class="footer-info-title">Support</h3>
+            <ul class="footer-info-list">
+                <li class="footer-info-item"><a href="#">Help Center</a></li>
+                <li class="footer-info-item"><a href="#">AirCover</a></li>
+                <li class="footer-info-item"><a href="#">Anti-discrimination</a>
                 </li>
+                <li class="footer-info-item"><a href="#">Disability Support</a>
+                </li>
+                <li class="footer-info-item"><a href="#">Cancellation
+                    Options</a></li>
+                <li class="footer-info-item"><a href="#">Report Neighborhood
+                    Concern</a></li>
             </ul>
-        </li>
-    </ul>
+        </div>
+        <div class="footer-info-column">
+            <h3 class="footer-info-title">Hosting</h3>
+            <ul class="footer-info-list">
+                <li class="footer-info-item"><a href="#">Airbnb Your Home</a>
+                </li>
+                <li class="footer-info-item"><a href="#">AirCover for Hosts</a>
+                </li>
+                <li class="footer-info-item"><a href="#">Hosting Resources</a>
+                </li>
+                <li class="footer-info-item"><a href="#">Community Forum</a>
+                </li>
+                <li class="footer-info-item"><a href="#">Hosting Responsibly</a>
+                </li>
+                <li class="footer-info-item"><a href="#">Airbnb-Friendly
+                    Apartments</a></li>
+                <li class="footer-info-item"><a href="#">Join a Free Hosting
+                    Class</a></li>
+                <li class="footer-info-item"><a href="#">Find a Co-Host</a></li>
+            </ul>
+        </div>
+        <div class="footer-info-column">
+            <h3 class="footer-info-title">Airbnb</h3>
+            <ul class="footer-info-list">
+                <li class="footer-info-item"><a href="#">Newsroom</a></li>
+                <li class="footer-info-item"><a href="#">New Features</a></li>
+                <li class="footer-info-item"><a href="#">Careers</a></li>
+                <li class="footer-info-item"><a href="#">Investors</a></li>
+                <li class="footer-info-item"><a href="#">Gift Cards</a></li>
+                <li class="footer-info-item"><a href="#">Airbnb.org Emergency
+                    Stays</a></li>
+            </ul>
+        </div>
+    </section>
+    <section class="footer-bottom-section">
+        <div class="footer-legal-info">
+            <div class="footer-copyright">© 2025 Airbnb, Inc.</div>
+            <ul class="footer-legal-links">
+                <li class="footer-legal-item"><a href="#">Terms</a></li>
+                <li class="footer-legal-item"><a href="#">Sitemap</a></li>
+                <li class="footer-legal-item"><a href="#">Privacy</a></li>
+                <li class="footer-legal-item"><a href="#">Your Privacy Choices
+                    <i class="fas fa-money-bill-alt"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-settings">
+            <div class="footer-language"><a href="#"><i
+                    class="fa-solid fa-globe"></i>
+                <strong>English</strong> (US)</a></div>
+            <div class="footer-currency"><a href="#"><strong>$</strong> USD</a>
+            </div>
+            <div class="footer-social-media">
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-square-twitter"></i>
+                <i class="fa-brands fa-square-instagram"></i>
+            </div>
+        </div>
+    </section>
 </footer>
 <template id="card-template">
     <div class="card">
         <div class="card-carousel">
-            <div class="card-carousel-items">
-                <div class="card-image">
-                    <img src="../images/card-image1.avif" alt="One image">
-                </div>
-                <div class="card-image">
-                    <img src="../images/card-image2.avif" alt="One image">
-                </div>
-                <div class="card-image">
-                    <img src="../images/card-image3.avif" alt="One image">
-                </div>
-                <div class="card-image">
-                    <img src="../images/card-image4.avif" alt="One image">
-                </div>
-                <div class="card-image">
-                    <img src="../images/card-image5.avif" alt="One image">
-                </div>
-
-            </div>
+            <div class="card-carousel-items"></div>
             <div class="overlay">
                 <div class="overlay-top">
                     <div class="overlay-top-left"><strong>Guest
@@ -81,6 +128,41 @@
             <div class="card-info-price"><strong>Price</strong> night</div>
         </div>
     </div>
+</template>
+<template id="card-image-template">
+    <div class="card-image">
+        <img src="" alt="">
+    </div>
+</template>
+<template id="tabs-container-template">
+    <div class="footer-tabs-container">
+        <div class="footer-tab-buttons-container">
+            <div class="footer-tab-buttons-scroll-container">
+                <div class="footer-tab-buttons-wrapper"></div>
+            </div>
+            <button class="btn-scroll scroll-left hidden"><i
+                    class="fas fa-chevron-left"></i></button>
+            <button class="btn-scroll scroll-right"><i
+                    class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="footer-tab-contents"></div>
+    </div>
+</template>
+<template id="tab-button-template">
+    <button class="footer-tab-button">Popular</button>
+</template>
+<template id="tab-content-template">
+    <div class="footer-tab-content">
+        <ul class="footer-tab-panel-list"></ul>
+    </div>
+</template>
+<template id="tab-panel-item-template">
+    <li class="footer-tab-panel-item">
+        <a href="#" class="footer-tab-link">
+            <span class="footer-tab-location"><strong>Location</strong></span>
+            <span class="footer-tab-type">Type</span>
+        </a>
+    </li>
 </template>
 </body>
 </html>

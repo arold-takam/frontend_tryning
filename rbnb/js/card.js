@@ -25,20 +25,17 @@ export class Card {
     #priceElement
     #rankingElement
 
-    constructor(location, distance, period, price, ranking, isGuestFavorite, isLiked, images) {
-        this.#location = location;
-        this.#distance = distance;
-        this.#period = period;
-        this.#price = price;
-        this.#ranking = ranking;
-        this.#isGuestFavorite = isGuestFavorite;
-        this.#isLiked = isLiked;
-        this.#images = images;
+    constructor(cardData) {
+        this.#location = cardData.location;
+        this.#distance = cardData.distance;
+        this.#period = cardData.period;
+        this.#price = cardData.price;
+        this.#ranking = cardData.ranking;
+        this.#isGuestFavorite = cardData.isGuessFavorite;
+        this.#isLiked = cardData.isLiked;
+        this.#images = cardData.images;
         this.#currentIndex = 0
-        this.#cardElement = document
-            .getElementById("card-template")
-            .content
-            .cloneNode(true)
+        this.#cardElement = document.getElementById("card-template").content.cloneNode(true)
         this.#setNavigation();
         this.#setCarousel();
         this.#setContent();
@@ -98,13 +95,11 @@ export class Card {
     }
 
     #addImage(imageURL, imageDescription) {
-        const div = document.createElement("div")
-        const image = document.createElement("img")
-        div.classList.add("card-image")
+        const cardImage = document.getElementById("card-image-template").content.cloneNode(true)
+        const image = cardImage.querySelector("img")
         image.setAttribute("src", `../images/${imageURL}`)
         image.setAttribute("alt", imageDescription)
-        div.append(image)
-        this.#cardCarouselItems.append(div)
+        this.#cardCarouselItems.append(cardImage)
     }
 
     #addDot(index) {

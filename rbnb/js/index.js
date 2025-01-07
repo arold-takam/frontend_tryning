@@ -1,6 +1,7 @@
-import { Card } from "./card.js";
+import {Card} from "./card.js";
+import {Tabs} from "./tabs.js";
 
-const data = [
+const cardsData = [
     {
         location: "Bairro Mellos, Brazil",
         distance: "11,065 kilometers away",
@@ -42,12 +43,16 @@ const data = [
         isLiked: false,
         images: [
             {
-                url: "card-image5.avif",
-                description: "Image 5"
+                url: "card-image4.avif",
+                description: "Image 4"
             },
             {
                 url: "card-image3.avif",
                 description: "Image 3"
+            },
+            {
+                url: "card-image5.avif",
+                description: "Image 5"
             },
             {
                 url: "card-image2.avif",
@@ -56,10 +61,6 @@ const data = [
             {
                 url: "card-image1.avif",
                 description: "Image 1"
-            },
-            {
-                url: "card-image4.avif",
-                description: "Image 4"
             },
         ]
     },
@@ -95,11 +96,1524 @@ const data = [
         ]
     }
 ]
+const tabsData = [
+    {
+        tab: "Popular",
+        content: [
+            {
+                location: "Canmore",
+                type: "Condo rentals"
+            },
+            {
+                location: "Marbella",
+                type: "Cottage rentals"
+            },
+            {
+                location: "Prescott",
+                type: "Cabin rentals"
+            },
+            {
+                location: "Tucson",
+                type: "Mansion rentals"
+            },
+            {
+                location: "Benalmádena",
+                type: "House rentals"
+            },
+            {
+                location: "Mijas",
+                type: "Apartment rentals"
+            },
+            {
+                location: "Scottsdale",
+                type: "Rentals with pools"
+            },
+            {
+                location: "Jasper",
+                type: "Cabin rentals"
+            },
+            {
+                location: "Mountain View",
+                type: "Cabin rentals"
+            },
+            {
+                location: "Devonport",
+                type: "Cottage rentals"
+            },
+            {
+                location: "Mallacoota",
+                type: "Pet-friendly rentals"
+            },
+            {
+                location: "Ibiza",
+                type: "Vacation rentals"
+            },
+            {
+                location: "Anaheim",
+                type: "Apartments rentals"
+            },
+            {
+                location: "Monterey",
+                type: "Cottage rentals"
+            },
+            {
+                location: "Paso Robles",
+                type: "House rentals"
+            },
+            {
+                location: "Santa Barbara",
+                type: "Condo rentals"
+            },
+            {
+                location: "Sonoma",
+                type: "Cabin rentals"
+            },
+            {
+                location: "La Serena",
+                type: "Condo rentals"
+            },
+            {
+                location: "Dubai",
+                type: "Beach house rentals"
+            },
+            {
+                location: "Birmingham",
+                type: "Apartment rentals"
+            },
+            {
+                location: "Brighton",
+                type: "House rentals"
+            },
+            {
+                location: "Palm Springs",
+                type: "Cabin rentals"
+            },
+            {
+                location: "New York City",
+                type: "Cottage rentals"
+            },
+            {
+                location: "Las Vegas",
+                type: "Condo rentals"
+            },
+            {
+                location: "Austin",
+                type: "House rentals"
+            },
+            {
+                location: "Sydney",
+                type: "Rentals with pools"
+            },
+            {
+                location: "Tokyo",
+                type: "Pet-friendly rentals"
+            },
+            {
+                location: "Canggu",
+                type: "Vacation rentals"
+            },
+            {
+                location: "San Francisco",
+                type: "Apartments rentals"
+            },
+            {
+                location: "San Diego",
+                type: "Cottage rentals"
+            },
+        ]
+    },
+    {
+        tab: "Arts & culture",
+        content: [
+            {
+                location: "Phoenix",
+                type: "Rentals with pools"
+            },
+            {
+                location: "Hot Springs",
+                type: "House rentals"
+            },
+            {
+                location: "Los Angeles",
+                type: "House rentals"
+            },
+            {
+                location: "San Diego",
+                type: "Apartment rentals"
+            },
+            {
+                location: "San Francisco",
+                type: "Vacation rentals"
+            },
+            {
+                location: "Barcelona",
+                type: "Vacation rentals"
+            },
+            {
+                location: "Prague",
+                type: "Vacation rentals"
+            },
+            {
+                location: "Washington",
+                type: "Apartment rentals"
+            },
+            {
+                location: "Keswick",
+                type: "Apartment rentals"
+            },
+            {
+                location: "London",
+                type: "Villa rentals"
+            },
+            {
+                location: "Scarborough",
+                type: "Vacation rentals"
+            },
+            {
+                location: "Paris",
+                type: "Luxury rentals"
+            },
+            {
+                location: "Rome",
+                type: "Historic rentals"
+            },
+            {
+                location: "Miami",
+                type: "Beachfront rentals"
+            },
+            {
+                location: "Hawaii",
+                type: "Island rentals"
+            },
+            {
+                location: "Nashville",
+                type: "Country rentals"
+            },
+            {
+                location: "Seattle",
+                type: "Urban rentals"
+            },
+            {
+                location: "Chicago",
+                type: "Downtown rentals"
+            },
+            {
+                location: "Boston",
+                type: "Colonial rentals"
+            },
+            {
+                location: "Orlando",
+                type: "Theme park rentals"
+            },
+            {
+                location: "Toronto",
+                type: "City rentals"
+            },
+            {
+                location: "Vancouver",
+                type: "Mountain rentals"
+            },
+            {
+                location: "Quebec City",
+                type: "Chateau rentals"
+            },
+            {
+                location: "Copenhagen",
+                type: "Scandinavian rentals"
+            },
+            {
+                location: "Dubai",
+                type: "Luxury rentals"
+            },
+            {
+                location: "Cape Town",
+                type: "Coastal rentals"
+            },
+            {
+                location: "Reykjavik",
+                type: "Icelandic rentals"
+            },
+            {
+                location: "Marrakesh",
+                type: "Riad rentals"
+            },
+            {
+                location: "Florence",
+                type: "Villa rentals"
+            },
+            {
+                location: "Sydney",
+                type: "Waterfront rentals"
+            }
+        ]
+    },
+    {
+        tab: "Outdoors",
+        content: [
+            {
+                location: "Canmore",
+                type: "Condo rentals"
+            },
+            {
+                location: "Marbella",
+                type: "Cottage rentals"
+            },
+            {
+                location: "Prescott",
+                type: "Cabin rentals"
+            },
+            {
+                location: "Tucson",
+                type: "Mansion rentals"
+            },
+            {
+                location: "Benalmádena",
+                type: "House rentals"
+            },
+            {
+                location: "Mijas",
+                type: "Apartment rentals"
+            },
+            {
+                location: "Scottsdale",
+                type: "Rentals with pools"
+            },
+            {
+                location: "Jasper",
+                type: "Cabin rentals"
+            },
+            {
+                location: "Mountain View",
+                type: "Cabin rentals"
+            },
+            {
+                location: "Devonport",
+                type: "Cottage rentals"
+            },
+            {
+                location: "Mallacoota",
+                type: "Pet-friendly rentals"
+            },
+            {
+                location: "Ibiza",
+                type: "Vacation rentals"
+            },
+            {
+                location: "Anaheim",
+                type: "Apartments rentals"
+            },
+            {
+                location: "Monterey",
+                type: "Cottage rentals"
+            },
+            {
+                location: "Paso Robles",
+                type: "House rentals"
+            },
+            {
+                location: "Santa Barbara",
+                type: "Condo rentals"
+            },
+            {
+                location: "Sonoma",
+                type: "Cabin rentals"
+            },
+            {
+                location: "La Serena",
+                type: "Condo rentals"
+            },
+            {
+                location: "Dubai",
+                type: "Beach house rentals"
+            },
+            {
+                location: "Birmingham",
+                type: "Apartment rentals"
+            },
+            {
+                location: "Brighton",
+                type: "House rentals"
+            },
+            {
+                location: "Palm Springs",
+                type: "Cabin rentals"
+            },
+            {
+                location: "New York City",
+                type: "Cottage rentals"
+            },
+            {
+                location: "Las Vegas",
+                type: "Condo rentals"
+            },
+            {
+                location: "Austin",
+                type: "House rentals"
+            },
+            {
+                location: "Sydney",
+                type: "Rentals with pools"
+            },
+            {
+                location: "Tokyo",
+                type: "Pet-friendly rentals"
+            },
+            {
+                location: "Canggu",
+                type: "Vacation rentals"
+            },
+            {
+                location: "San Francisco",
+                type: "Apartments rentals"
+            },
+            {
+                location: "San Diego",
+                type: "Cottage rentals"
+            },
+        ]
+    },
+    {
+        tab: "Mountains",
+        content: [
+            {
+                location: "Phoenix",
+                type: "Rentals with pools"
+            },
+            {
+                location: "Hot Springs",
+                type: "House rentals"
+            },
+            {
+                location: "Los Angeles",
+                type: "House rentals"
+            },
+            {
+                location: "San Diego",
+                type: "Apartment rentals"
+            },
+            {
+                location: "San Francisco",
+                type: "Vacation rentals"
+            },
+            {
+                location: "Barcelona",
+                type: "Vacation rentals"
+            },
+            {
+                location: "Prague",
+                type: "Vacation rentals"
+            },
+            {
+                location: "Washington",
+                type: "Apartment rentals"
+            },
+            {
+                location: "Keswick",
+                type: "Apartment rentals"
+            },
+            {
+                location: "London",
+                type: "Villa rentals"
+            },
+            {
+                location: "Scarborough",
+                type: "Vacation rentals"
+            },
+            {
+                location: "Paris",
+                type: "Luxury rentals"
+            },
+            {
+                location: "Rome",
+                type: "Historic rentals"
+            },
+            {
+                location: "Miami",
+                type: "Beachfront rentals"
+            },
+            {
+                location: "Hawaii",
+                type: "Island rentals"
+            },
+            {
+                location: "Nashville",
+                type: "Country rentals"
+            },
+            {
+                location: "Seattle",
+                type: "Urban rentals"
+            },
+            {
+                location: "Chicago",
+                type: "Downtown rentals"
+            },
+            {
+                location: "Boston",
+                type: "Colonial rentals"
+            },
+            {
+                location: "Orlando",
+                type: "Theme park rentals"
+            },
+            {
+                location: "Toronto",
+                type: "City rentals"
+            },
+            {
+                location: "Vancouver",
+                type: "Mountain rentals"
+            },
+            {
+                location: "Quebec City",
+                type: "Chateau rentals"
+            },
+            {
+                location: "Copenhagen",
+                type: "Scandinavian rentals"
+            },
+            {
+                location: "Dubai",
+                type: "Luxury rentals"
+            },
+            {
+                location: "Cape Town",
+                type: "Coastal rentals"
+            },
+            {
+                location: "Reykjavik",
+                type: "Icelandic rentals"
+            },
+            {
+                location: "Marrakesh",
+                type: "Riad rentals"
+            },
+            {
+                location: "Florence",
+                type: "Villa rentals"
+            },
+            {
+                location: "Sydney",
+                type: "Waterfront rentals"
+            }
+        ]
+    },
+    {
+        tab: "Beach",
+        content: [
+            {
+                location: "Canmore",
+                type: "Condo rentals"
+            },
+            {
+                location: "Marbella",
+                type: "Cottage rentals"
+            },
+            {
+                location: "Prescott",
+                type: "Cabin rentals"
+            },
+            {
+                location: "Tucson",
+                type: "Mansion rentals"
+            },
+            {
+                location: "Benalmádena",
+                type: "House rentals"
+            },
+            {
+                location: "Mijas",
+                type: "Apartment rentals"
+            },
+            {
+                location: "Scottsdale",
+                type: "Rentals with pools"
+            },
+            {
+                location: "Jasper",
+                type: "Cabin rentals"
+            },
+            {
+                location: "Mountain View",
+                type: "Cabin rentals"
+            },
+            {
+                location: "Devonport",
+                type: "Cottage rentals"
+            },
+            {
+                location: "Mallacoota",
+                type: "Pet-friendly rentals"
+            },
+            {
+                location: "Ibiza",
+                type: "Vacation rentals"
+            },
+            {
+                location: "Anaheim",
+                type: "Apartments rentals"
+            },
+            {
+                location: "Monterey",
+                type: "Cottage rentals"
+            },
+            {
+                location: "Paso Robles",
+                type: "House rentals"
+            },
+            {
+                location: "Santa Barbara",
+                type: "Condo rentals"
+            },
+            {
+                location: "Sonoma",
+                type: "Cabin rentals"
+            },
+            {
+                location: "La Serena",
+                type: "Condo rentals"
+            },
+            {
+                location: "Dubai",
+                type: "Beach house rentals"
+            },
+            {
+                location: "Birmingham",
+                type: "Apartment rentals"
+            },
+            {
+                location: "Brighton",
+                type: "House rentals"
+            },
+            {
+                location: "Palm Springs",
+                type: "Cabin rentals"
+            },
+            {
+                location: "New York City",
+                type: "Cottage rentals"
+            },
+            {
+                location: "Las Vegas",
+                type: "Condo rentals"
+            },
+            {
+                location: "Austin",
+                type: "House rentals"
+            },
+            {
+                location: "Sydney",
+                type: "Rentals with pools"
+            },
+            {
+                location: "Tokyo",
+                type: "Pet-friendly rentals"
+            },
+            {
+                location: "Canggu",
+                type: "Vacation rentals"
+            },
+            {
+                location: "San Francisco",
+                type: "Apartments rentals"
+            },
+            {
+                location: "San Diego",
+                type: "Cottage rentals"
+            },
+        ]
+    },
+    {
+        tab: "Unique stays",
+        content: [
+            {
+                location: "Phoenix",
+                type: "Rentals with pools"
+            },
+            {
+                location: "Hot Springs",
+                type: "House rentals"
+            },
+            {
+                location: "Los Angeles",
+                type: "House rentals"
+            },
+            {
+                location: "San Diego",
+                type: "Apartment rentals"
+            },
+            {
+                location: "San Francisco",
+                type: "Vacation rentals"
+            },
+            {
+                location: "Barcelona",
+                type: "Vacation rentals"
+            },
+            {
+                location: "Prague",
+                type: "Vacation rentals"
+            },
+            {
+                location: "Washington",
+                type: "Apartment rentals"
+            },
+            {
+                location: "Keswick",
+                type: "Apartment rentals"
+            },
+            {
+                location: "London",
+                type: "Villa rentals"
+            },
+            {
+                location: "Scarborough",
+                type: "Vacation rentals"
+            },
+            {
+                location: "Paris",
+                type: "Luxury rentals"
+            },
+            {
+                location: "Rome",
+                type: "Historic rentals"
+            },
+            {
+                location: "Miami",
+                type: "Beachfront rentals"
+            },
+            {
+                location: "Hawaii",
+                type: "Island rentals"
+            },
+            {
+                location: "Nashville",
+                type: "Country rentals"
+            },
+            {
+                location: "Seattle",
+                type: "Urban rentals"
+            },
+            {
+                location: "Chicago",
+                type: "Downtown rentals"
+            },
+            {
+                location: "Boston",
+                type: "Colonial rentals"
+            },
+            {
+                location: "Orlando",
+                type: "Theme park rentals"
+            },
+            {
+                location: "Toronto",
+                type: "City rentals"
+            },
+            {
+                location: "Vancouver",
+                type: "Mountain rentals"
+            },
+            {
+                location: "Quebec City",
+                type: "Chateau rentals"
+            },
+            {
+                location: "Copenhagen",
+                type: "Scandinavian rentals"
+            },
+            {
+                location: "Dubai",
+                type: "Luxury rentals"
+            },
+            {
+                location: "Cape Town",
+                type: "Coastal rentals"
+            },
+            {
+                location: "Reykjavik",
+                type: "Icelandic rentals"
+            },
+            {
+                location: "Marrakesh",
+                type: "Riad rentals"
+            },
+            {
+                location: "Florence",
+                type: "Villa rentals"
+            },
+            {
+                location: "Sydney",
+                type: "Waterfront rentals"
+            }
+        ]
+    },
+    {
+        tab: "Popular",
+        content: [
+            {
+                location: "Canmore",
+                type: "Condo rentals"
+            },
+            {
+                location: "Marbella",
+                type: "Cottage rentals"
+            },
+            {
+                location: "Prescott",
+                type: "Cabin rentals"
+            },
+            {
+                location: "Tucson",
+                type: "Mansion rentals"
+            },
+            {
+                location: "Benalmádena",
+                type: "House rentals"
+            },
+            {
+                location: "Mijas",
+                type: "Apartment rentals"
+            },
+            {
+                location: "Scottsdale",
+                type: "Rentals with pools"
+            },
+            {
+                location: "Jasper",
+                type: "Cabin rentals"
+            },
+            {
+                location: "Mountain View",
+                type: "Cabin rentals"
+            },
+            {
+                location: "Devonport",
+                type: "Cottage rentals"
+            },
+            {
+                location: "Mallacoota",
+                type: "Pet-friendly rentals"
+            },
+            {
+                location: "Ibiza",
+                type: "Vacation rentals"
+            },
+            {
+                location: "Anaheim",
+                type: "Apartments rentals"
+            },
+            {
+                location: "Monterey",
+                type: "Cottage rentals"
+            },
+            {
+                location: "Paso Robles",
+                type: "House rentals"
+            },
+            {
+                location: "Santa Barbara",
+                type: "Condo rentals"
+            },
+            {
+                location: "Sonoma",
+                type: "Cabin rentals"
+            },
+            {
+                location: "La Serena",
+                type: "Condo rentals"
+            },
+            {
+                location: "Dubai",
+                type: "Beach house rentals"
+            },
+            {
+                location: "Birmingham",
+                type: "Apartment rentals"
+            },
+            {
+                location: "Brighton",
+                type: "House rentals"
+            },
+            {
+                location: "Palm Springs",
+                type: "Cabin rentals"
+            },
+            {
+                location: "New York City",
+                type: "Cottage rentals"
+            },
+            {
+                location: "Las Vegas",
+                type: "Condo rentals"
+            },
+            {
+                location: "Austin",
+                type: "House rentals"
+            },
+            {
+                location: "Sydney",
+                type: "Rentals with pools"
+            },
+            {
+                location: "Tokyo",
+                type: "Pet-friendly rentals"
+            },
+            {
+                location: "Canggu",
+                type: "Vacation rentals"
+            },
+            {
+                location: "San Francisco",
+                type: "Apartments rentals"
+            },
+            {
+                location: "San Diego",
+                type: "Cottage rentals"
+            },
+        ]
+    },
+    {
+        tab: "Arts & culture",
+        content: [
+            {
+                location: "Phoenix",
+                type: "Rentals with pools"
+            },
+            {
+                location: "Hot Springs",
+                type: "House rentals"
+            },
+            {
+                location: "Los Angeles",
+                type: "House rentals"
+            },
+            {
+                location: "San Diego",
+                type: "Apartment rentals"
+            },
+            {
+                location: "San Francisco",
+                type: "Vacation rentals"
+            },
+            {
+                location: "Barcelona",
+                type: "Vacation rentals"
+            },
+            {
+                location: "Prague",
+                type: "Vacation rentals"
+            },
+            {
+                location: "Washington",
+                type: "Apartment rentals"
+            },
+            {
+                location: "Keswick",
+                type: "Apartment rentals"
+            },
+            {
+                location: "London",
+                type: "Villa rentals"
+            },
+            {
+                location: "Scarborough",
+                type: "Vacation rentals"
+            },
+            {
+                location: "Paris",
+                type: "Luxury rentals"
+            },
+            {
+                location: "Rome",
+                type: "Historic rentals"
+            },
+            {
+                location: "Miami",
+                type: "Beachfront rentals"
+            },
+            {
+                location: "Hawaii",
+                type: "Island rentals"
+            },
+            {
+                location: "Nashville",
+                type: "Country rentals"
+            },
+            {
+                location: "Seattle",
+                type: "Urban rentals"
+            },
+            {
+                location: "Chicago",
+                type: "Downtown rentals"
+            },
+            {
+                location: "Boston",
+                type: "Colonial rentals"
+            },
+            {
+                location: "Orlando",
+                type: "Theme park rentals"
+            },
+            {
+                location: "Toronto",
+                type: "City rentals"
+            },
+            {
+                location: "Vancouver",
+                type: "Mountain rentals"
+            },
+            {
+                location: "Quebec City",
+                type: "Chateau rentals"
+            },
+            {
+                location: "Copenhagen",
+                type: "Scandinavian rentals"
+            },
+            {
+                location: "Dubai",
+                type: "Luxury rentals"
+            },
+            {
+                location: "Cape Town",
+                type: "Coastal rentals"
+            },
+            {
+                location: "Reykjavik",
+                type: "Icelandic rentals"
+            },
+            {
+                location: "Marrakesh",
+                type: "Riad rentals"
+            },
+            {
+                location: "Florence",
+                type: "Villa rentals"
+            },
+            {
+                location: "Sydney",
+                type: "Waterfront rentals"
+            }
+        ]
+    },
+    {
+        tab: "Outdoors",
+        content: [
+            {
+                location: "Canmore",
+                type: "Condo rentals"
+            },
+            {
+                location: "Marbella",
+                type: "Cottage rentals"
+            },
+            {
+                location: "Prescott",
+                type: "Cabin rentals"
+            },
+            {
+                location: "Tucson",
+                type: "Mansion rentals"
+            },
+            {
+                location: "Benalmádena",
+                type: "House rentals"
+            },
+            {
+                location: "Mijas",
+                type: "Apartment rentals"
+            },
+            {
+                location: "Scottsdale",
+                type: "Rentals with pools"
+            },
+            {
+                location: "Jasper",
+                type: "Cabin rentals"
+            },
+            {
+                location: "Mountain View",
+                type: "Cabin rentals"
+            },
+            {
+                location: "Devonport",
+                type: "Cottage rentals"
+            },
+            {
+                location: "Mallacoota",
+                type: "Pet-friendly rentals"
+            },
+            {
+                location: "Ibiza",
+                type: "Vacation rentals"
+            },
+            {
+                location: "Anaheim",
+                type: "Apartments rentals"
+            },
+            {
+                location: "Monterey",
+                type: "Cottage rentals"
+            },
+            {
+                location: "Paso Robles",
+                type: "House rentals"
+            },
+            {
+                location: "Santa Barbara",
+                type: "Condo rentals"
+            },
+            {
+                location: "Sonoma",
+                type: "Cabin rentals"
+            },
+            {
+                location: "La Serena",
+                type: "Condo rentals"
+            },
+            {
+                location: "Dubai",
+                type: "Beach house rentals"
+            },
+            {
+                location: "Birmingham",
+                type: "Apartment rentals"
+            },
+            {
+                location: "Brighton",
+                type: "House rentals"
+            },
+            {
+                location: "Palm Springs",
+                type: "Cabin rentals"
+            },
+            {
+                location: "New York City",
+                type: "Cottage rentals"
+            },
+            {
+                location: "Las Vegas",
+                type: "Condo rentals"
+            },
+            {
+                location: "Austin",
+                type: "House rentals"
+            },
+            {
+                location: "Sydney",
+                type: "Rentals with pools"
+            },
+            {
+                location: "Tokyo",
+                type: "Pet-friendly rentals"
+            },
+            {
+                location: "Canggu",
+                type: "Vacation rentals"
+            },
+            {
+                location: "San Francisco",
+                type: "Apartments rentals"
+            },
+            {
+                location: "San Diego",
+                type: "Cottage rentals"
+            },
+        ]
+    },
+    {
+        tab: "Mountains",
+        content: [
+            {
+                location: "Phoenix",
+                type: "Rentals with pools"
+            },
+            {
+                location: "Hot Springs",
+                type: "House rentals"
+            },
+            {
+                location: "Los Angeles",
+                type: "House rentals"
+            },
+            {
+                location: "San Diego",
+                type: "Apartment rentals"
+            },
+            {
+                location: "San Francisco",
+                type: "Vacation rentals"
+            },
+            {
+                location: "Barcelona",
+                type: "Vacation rentals"
+            },
+            {
+                location: "Prague",
+                type: "Vacation rentals"
+            },
+            {
+                location: "Washington",
+                type: "Apartment rentals"
+            },
+            {
+                location: "Keswick",
+                type: "Apartment rentals"
+            },
+            {
+                location: "London",
+                type: "Villa rentals"
+            },
+            {
+                location: "Scarborough",
+                type: "Vacation rentals"
+            },
+            {
+                location: "Paris",
+                type: "Luxury rentals"
+            },
+            {
+                location: "Rome",
+                type: "Historic rentals"
+            },
+            {
+                location: "Miami",
+                type: "Beachfront rentals"
+            },
+            {
+                location: "Hawaii",
+                type: "Island rentals"
+            },
+            {
+                location: "Nashville",
+                type: "Country rentals"
+            },
+            {
+                location: "Seattle",
+                type: "Urban rentals"
+            },
+            {
+                location: "Chicago",
+                type: "Downtown rentals"
+            },
+            {
+                location: "Boston",
+                type: "Colonial rentals"
+            },
+            {
+                location: "Orlando",
+                type: "Theme park rentals"
+            },
+            {
+                location: "Toronto",
+                type: "City rentals"
+            },
+            {
+                location: "Vancouver",
+                type: "Mountain rentals"
+            },
+            {
+                location: "Quebec City",
+                type: "Chateau rentals"
+            },
+            {
+                location: "Copenhagen",
+                type: "Scandinavian rentals"
+            },
+            {
+                location: "Dubai",
+                type: "Luxury rentals"
+            },
+            {
+                location: "Cape Town",
+                type: "Coastal rentals"
+            },
+            {
+                location: "Reykjavik",
+                type: "Icelandic rentals"
+            },
+            {
+                location: "Marrakesh",
+                type: "Riad rentals"
+            },
+            {
+                location: "Florence",
+                type: "Villa rentals"
+            },
+            {
+                location: "Sydney",
+                type: "Waterfront rentals"
+            }
+        ]
+    },
+    {
+        tab: "Beach",
+        content: [
+            {
+                location: "Canmore",
+                type: "Condo rentals"
+            },
+            {
+                location: "Marbella",
+                type: "Cottage rentals"
+            },
+            {
+                location: "Prescott",
+                type: "Cabin rentals"
+            },
+            {
+                location: "Tucson",
+                type: "Mansion rentals"
+            },
+            {
+                location: "Benalmádena",
+                type: "House rentals"
+            },
+            {
+                location: "Mijas",
+                type: "Apartment rentals"
+            },
+            {
+                location: "Scottsdale",
+                type: "Rentals with pools"
+            },
+            {
+                location: "Jasper",
+                type: "Cabin rentals"
+            },
+            {
+                location: "Mountain View",
+                type: "Cabin rentals"
+            },
+            {
+                location: "Devonport",
+                type: "Cottage rentals"
+            },
+            {
+                location: "Mallacoota",
+                type: "Pet-friendly rentals"
+            },
+            {
+                location: "Ibiza",
+                type: "Vacation rentals"
+            },
+            {
+                location: "Anaheim",
+                type: "Apartments rentals"
+            },
+            {
+                location: "Monterey",
+                type: "Cottage rentals"
+            },
+            {
+                location: "Paso Robles",
+                type: "House rentals"
+            },
+            {
+                location: "Santa Barbara",
+                type: "Condo rentals"
+            },
+            {
+                location: "Sonoma",
+                type: "Cabin rentals"
+            },
+            {
+                location: "La Serena",
+                type: "Condo rentals"
+            },
+            {
+                location: "Dubai",
+                type: "Beach house rentals"
+            },
+            {
+                location: "Birmingham",
+                type: "Apartment rentals"
+            },
+            {
+                location: "Brighton",
+                type: "House rentals"
+            },
+            {
+                location: "Palm Springs",
+                type: "Cabin rentals"
+            },
+            {
+                location: "New York City",
+                type: "Cottage rentals"
+            },
+            {
+                location: "Las Vegas",
+                type: "Condo rentals"
+            },
+            {
+                location: "Austin",
+                type: "House rentals"
+            },
+            {
+                location: "Sydney",
+                type: "Rentals with pools"
+            },
+            {
+                location: "Tokyo",
+                type: "Pet-friendly rentals"
+            },
+            {
+                location: "Canggu",
+                type: "Vacation rentals"
+            },
+            {
+                location: "San Francisco",
+                type: "Apartments rentals"
+            },
+            {
+                location: "San Diego",
+                type: "Cottage rentals"
+            },
+        ]
+    },
+    {
+        tab: "Unique stays",
+        content: [
+            {
+                location: "Phoenix",
+                type: "Rentals with pools"
+            },
+            {
+                location: "Hot Springs",
+                type: "House rentals"
+            },
+            {
+                location: "Los Angeles",
+                type: "House rentals"
+            },
+            {
+                location: "San Diego",
+                type: "Apartment rentals"
+            },
+            {
+                location: "San Francisco",
+                type: "Vacation rentals"
+            },
+            {
+                location: "Barcelona",
+                type: "Vacation rentals"
+            },
+            {
+                location: "Prague",
+                type: "Vacation rentals"
+            },
+            {
+                location: "Washington",
+                type: "Apartment rentals"
+            },
+            {
+                location: "Keswick",
+                type: "Apartment rentals"
+            },
+            {
+                location: "London",
+                type: "Villa rentals"
+            },
+            {
+                location: "Scarborough",
+                type: "Vacation rentals"
+            },
+            {
+                location: "Paris",
+                type: "Luxury rentals"
+            },
+            {
+                location: "Rome",
+                type: "Historic rentals"
+            },
+            {
+                location: "Miami",
+                type: "Beachfront rentals"
+            },
+            {
+                location: "Hawaii",
+                type: "Island rentals"
+            },
+            {
+                location: "Nashville",
+                type: "Country rentals"
+            },
+            {
+                location: "Seattle",
+                type: "Urban rentals"
+            },
+            {
+                location: "Chicago",
+                type: "Downtown rentals"
+            },
+            {
+                location: "Boston",
+                type: "Colonial rentals"
+            },
+            {
+                location: "Orlando",
+                type: "Theme park rentals"
+            },
+            {
+                location: "Toronto",
+                type: "City rentals"
+            },
+            {
+                location: "Vancouver",
+                type: "Mountain rentals"
+            },
+            {
+                location: "Quebec City",
+                type: "Chateau rentals"
+            },
+            {
+                location: "Copenhagen",
+                type: "Scandinavian rentals"
+            },
+            {
+                location: "Dubai",
+                type: "Luxury rentals"
+            },
+            {
+                location: "Cape Town",
+                type: "Coastal rentals"
+            },
+            {
+                location: "Reykjavik",
+                type: "Icelandic rentals"
+            },
+            {
+                location: "Marrakesh",
+                type: "Riad rentals"
+            },
+            {
+                location: "Florence",
+                type: "Villa rentals"
+            },
+            {
+                location: "Sydney",
+                type: "Waterfront rentals"
+            }
+        ]
+    },
+]
 
-const container = document.getElementById("container")
-data.forEach(item => {
-    const card = new Card(item.location, item.distance, item.period, item.price, item.ranking, item.isGuessFavorite, item.isLiked, item.images)
-    const cardElement = card.cardElement
-    container.append(cardElement)
-});
+addCards();
+addFooterTabs();
 
+function addCards() {
+    const container = document.getElementById("cards-container")
+    cardsData.forEach(cardData => {
+        const card = new Card(cardData)
+        const cardElement = card.cardElement
+        container.append(cardElement)
+    });
+}
+
+function addFooterTabs() {
+    const footerInspirationSection = document.querySelector(".footer-inspiration-section");
+    let tabsContainer = new Tabs(tabsData).tabsContainer;
+    footerInspirationSection.append(tabsContainer)
+    // tabsContainer.updateScrollButtons()
+}
