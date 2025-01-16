@@ -1,0 +1,690 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+img{
+    display: block;
+}
+
+body{
+    width: 100vw;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 64px;
+    background-color: #191414;
+    padding: 0 2rem;
+    z-index: 100;
+}
+
+header figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+}
+
+header figure img{
+    width: auto;
+    height: 100%;
+}
+
+header .searchbar{
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+header .searchbar figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+}
+
+header .searchbar figure img{
+    width: auto;
+    height: 100%;
+}
+
+header .searchbar .put{
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    width: 474px;
+    background-color: rgba(255, 255, 255, 0.164);
+    border-radius: 1.5rem;
+    padding: 0.5rem;
+}
+
+header .searchbar .put figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+}
+
+header .searchbar .put figure img{
+    width: auto;
+    height: 100%;
+}
+
+header .searchbar .put input{
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 16px;
+    color: white;
+    border: none;
+    outline: none;
+}
+
+header .searchbar .put .book{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-left: 0.5px solid rgba(255, 255, 255, 0.322);
+    padding-left: 1rem;
+}
+
+header .searchbar .put .book img{
+    width: auto;
+    height: 100%;
+}
+
+.right{
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+.right button{
+    font-weight: bold;
+    background-color: white;
+    border-radius: 1rem;
+    border: none;
+    padding: 0.5rem;
+}
+
+.right .user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+}
+
+.right .user img{
+    width: auto;
+    height: 100%;
+}
+
+/* ------GESTION DU MENU DE COTE------------ */
+
+main{
+    position: relative;
+    width: 100vw;
+    height: calc(100vh - 64px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    background-color: #191414;
+}
+
+main aside{
+    position: fixed;
+    top: 64px;
+    width: 22%;
+    height: 85vh;
+    background-color: rgba(97, 97, 82, 0.199);
+    border-radius: 0.8rem;
+    margin-right: 0.5rem;
+    padding: 2rem;
+}
+
+aside .un{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+aside .un figure{
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+aside .un figure .im{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+}
+
+aside .un figure .im img{
+    width: auto;
+    height: 100%;
+}
+
+aside .un figure figcaption{
+    font-weight: bold;
+    color: white;
+}
+
+aside .un .plus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+}
+
+aside .un .plus img{
+    width: auto;
+    height: 100%;
+}
+
+aside button{
+    color: white;
+    background-color: rgba(255, 255, 255, 0.164);
+    border: none;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+aside .deux{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+aside .deux figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+}
+
+aside .deux figure img{
+    width: auto;
+    height: 100%;
+}
+
+aside .deux .plus{
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+aside .deux .plus figcaption{
+    font-weight: lighter;
+    color: white;
+}
+
+aside .deux .plus figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+}
+
+aside .deux .plus figure img{
+    width: auto;
+    height: 100%;
+}
+
+aside .troi{
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+aside .troi figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 88px;
+    height: 88px;
+}
+
+aside .troi figure img{
+    width: auto;
+    height: 100%;
+}
+
+aside .troi span h4{
+    color: #1db954;
+    margin-bottom: 0.3rem;
+}
+
+aside .troi span p{
+    color: white;
+    font-weight: lighter;
+}
+
+main section{
+    position: fixed;
+    top: 64px;
+    left: 25%;
+    width: 75%;
+    height: 85vh;
+    border-top-left-radius: 0.8rem;
+    border-top-right-radius: 0.8rem;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-right: 2rem;
+}
+
+main section::-webkit-scrollbar{
+    width: 1rem;
+    height: 1rem;
+    background-color: #191414;
+    z-index: 110;
+}
+
+main section::-webkit-scrollbar-thumb{
+    background-color: rgba(255, 255, 255, 0.295);
+    border-top-right-radius: 0.8rem;
+    z-index: 110;
+}
+
+section nav {
+    position: fixed;
+    top: 64px;
+    left: 25%;
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    width: 75%;
+    height: 64px;
+    background-color: rgba(70, 3, 3, 0.938);
+    /* background: linear-gradient(180deg, rgba(252, 3, 3, 0.233) 26.97%, #000000 100%); */
+    border-top-left-radius: 0.8rem;
+    border-top-right-radius: 0.8rem;
+    padding: 0 2rem;
+    z-index: 100; /* Assure que nav est au-dessus des autres éléments */
+}
+
+section nav a:first-child{
+    color: black;
+    background-color: white;
+}
+
+section nav a{
+    text-decoration: none;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.185);
+    border: none;
+    border-radius: 1rem;
+    padding: 0.5rem;
+}
+
+/* section nav::after {
+    position: fixed; 
+    top: 64px; 
+    left: 25%; 
+    content: "";
+    width: 75%; 
+    height: 13rem; 
+    background: linear-gradient(180deg, rgba(255, 0, 0, 0.432) 26.97%, #000000 100%);
+    border-top-left-radius: 0.8rem; 
+    border-top-right-radius: 0.8rem;
+    z-index: 99;
+} */
+
+section ul{
+    position: relative;
+    top: 64px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    list-style: none;
+}
+
+section ul #list figure{
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.281);
+    border-radius: 0.5rem;
+}
+
+section ul #list figure .im{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+}
+
+section ul #list figure .im img{
+    width: auto;
+    height: 100%;
+}
+
+section .title{
+    position: relative;
+    top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section .title h1{
+    color: white;
+    font-weight: bold;
+}
+
+section .title p{
+    color: rgba(255, 255, 255, 0.212);
+    font-size: medium;
+    font-weight: bold;
+}
+
+section .title1 p{
+    position: relative;
+    top: 10rem;
+    color: rgba(255, 255, 255, 0.212);
+    font-size: medium;
+    font-weight: bold;
+}
+
+/* --------------Gestion du carousel----------- */
+
+.carousel{
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 7rem;
+    /* background-color: purple; */
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    overflow: hidden;
+    /* border-radius: 0.8rem; */
+}
+
+.carousel ul{
+    position: relative;
+    top: 0rem;
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    transition: transform 0.5s ease-in-out;
+    background-color: rgba(172, 255, 47, 0.082);
+}
+
+.carousel ul li{
+    display: flex;
+    flex-direction: column;
+    width: 178px;
+    height: 230px;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+.carousel ul li:hover{
+    border-radius: 0.8rem;
+    background-color: rgba(255, 255, 255, 0.267);
+}
+
+.carousel ul li figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 178px;
+    height: 180px;
+}
+
+.carousel ul li figure img{
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel ul li figcaption{
+    font-size: medium;
+    color: rgba(255, 255, 255, 0.397);
+}
+
+.carousel .btn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.205);
+    border: none;
+    padding: 0.8rem;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    z-index: 10;
+    transition: 0.3s;
+}
+
+.carousel .btn:hover{
+    background-color: white;
+}
+
+.carousel #left{
+    left: 1rem;
+}
+
+.carousel #right{
+    right: 1rem;
+}
+
+.container{
+    position: relative;
+    top: 8rem;
+}
+
+.container ul{
+    display: flex;
+    align-items: center;
+    column-gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.container ul li{
+    background: url(../images/singer.png);
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.473);
+    width: 417px;
+    height: 500px;
+    border-radius: 1rem;
+    object-fit: cover;
+}
+
+.container ul li figure{
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    background-color: #1914143a;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    padding: 1.5rem;
+}
+
+.container ul li figure .im{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 96px;
+    height: 96px;
+}
+
+.container ul li figure .im img{
+    width: auto;
+    height: 100%;
+}
+
+.container ul li figure figcaption h2{
+    color: white;
+    font-size: xx-large;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.container ul li figure figcaption p{
+    font-size: medium;
+    color: rgba(255, 255, 255, 0.308);
+}
+
+.container ul li .mask{
+    position: relative;
+    top: 240px;
+    background-color: #1914143a;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-in-out;
+    padding: 1rem;
+}
+
+.container ul li:hover .mask{
+    opacity: 1;
+    visibility: visible;
+}
+
+.container ul li .mask p{
+    color: white;
+    font-size: medium;
+    margin-bottom: 1rem;
+}
+
+.container ul li .mask .icon{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+.container ul li .mask .icon .images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+}
+
+.container ul li .mask .icon .images img{
+    width: auto;
+    height: 100%;
+}
+
+section footer{
+    position: relative;
+    top: 13rem;
+    width: 100%;
+    height: 60vh;
+    /* background-color: rgba(255, 255, 255, 0.37); */
+    padding: 1.5rem;
+}
+
+section footer .nav1{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.274);
+    padding-bottom: 2rem;
+}
+
+section footer .nav1 ul{
+    display: flex;
+    flex-direction: column;
+}
+
+section footer .nav1 ul li h4{
+    color: white;
+}
+
+section footer .nav1 ul li a{
+    color: rgba(255, 255, 255, 0.418);
+    text-decoration: none;
+}
+
+section footer .nav1 ul .navi2{
+    position: relative;
+    top: -15rem;
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    margin-top: 15rem;
+}
+
+section footer .nav1 ul .navi2 li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+}
+
+section footer .nav1 ul .navi2 li img{
+    width: auto;
+    height: 100%;
+}
+
+section footer .last{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 12rem;
+}
+
+section footer .last ul{
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    position: relative;
+    top: -1rem;
+    color: rgba(255, 255, 255, 0.466);
+    font-size: medium;
+}
+
+section footer .last .cop{
+    position: relative;
+    top: -1rem;
+    color: rgba(255, 255, 255, 0.623);
+}
+
+/* ---------ANIMATION DE L'ASIDE---------- */
+
+.aside{
+    width: 8%;
+}
+
+
+

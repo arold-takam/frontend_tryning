@@ -1,0 +1,284 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+img{
+    display: block;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    height: 21vh;
+    background-color: white;
+    padding: 1rem 5rem;
+    border-bottom: 0.05rem solid #48484834;
+}
+
+.toph{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.toph figure{
+    width: 30%;
+}
+
+.toph figure a{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+    width: 10rem;
+}
+
+.toph figure a .im{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 32px;
+    height: 64px;
+    margin-right: 0.1rem;
+}
+
+.toph figure a figcaption{
+    color: #ff5a5f;
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+.toph ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    list-style: none;
+}
+
+.toph ul li {
+    margin: 0 1.5rem;
+}
+
+.toph ul li .p{
+    color: #484848;
+    transition: all 0.1s ease-in-out;
+}
+
+.toph ul li:hover .p{
+    padding: 1rem;
+    border-radius: 24px;
+    background-color: #48484813;
+}
+
+.toph .right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}*
+
+.toph .right p{
+    font-size: small;
+    font-weight: bold;
+    color: black;
+    transition: all 0.5s ease-in-out;
+}
+
+.toph .right p:hover{
+    padding: 1rem;
+    border-radius: 24px;
+    background-color: #48484813;
+}
+
+.toph .right figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    margin: 0 2rem;
+}
+
+.toph .right figure img{
+    width: auto;
+    height: 100%;
+}
+
+.toph .right button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 86px;
+    height: 48px;
+    border-radius: 24px;
+    border: 0.01rem solid #4848484b;
+    background-color: white;
+    padding: 0.3rem 0;
+}
+
+.toph .right button figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    margin: 0 0.5rem;
+}
+
+.toph .right button figure img{
+    width: auto;
+    height: 100%;
+}
+
+.toph .right button .im{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    margin: 0 0.5rem;
+}
+
+.toph .right button .im img{
+    width: auto;
+    height: 100%;
+}
+
+.botomh{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botomh ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50rem;
+    list-style: none;
+    border-radius: 32px;
+    border: 0.01rem solid #4848484b;
+    padding: 0.5rem 0.5rem;
+}
+
+.botomh ul li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 25%;
+    height: 100%;
+    border-right: 1px solid #4848484b;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-right: 2rem;
+    padding-left: 1rem;
+}
+
+.botomh ul #put{
+    width: 25%;
+}
+
+.botomh ul li label{
+    font-size: small;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+.botomh ul li input{
+    font-size: medium;
+    color: #484848;
+    border: none;
+}
+
+.botomh ul li h1{
+    font-size: small;
+    margin-bottom: 0.3rem;
+}
+
+.botomh ul li p{
+    color: #484848;
+}
+
+.botomh ul li figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    background-color: #ff5a5f;
+    border-radius: 32px;
+}
+
+.botomh ul li figure img{
+    width: auto;
+    height: 50%;
+}
+
+ul #loop{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 25%;
+    border-right: none;
+    padding: 0 0.5rem;
+}
+
+ul #loop li{
+    padding: 0.25rem 0;
+}
+
+/* Gestion des sous menus */
+
+    .rMnu{
+        position: absolute;
+        top: 5rem;
+        right: 5rem;
+        /* height: 10; */
+        /* background-color: white; */
+        border-radius: 1rem solid #464646;
+        box-shadow: 0px 0px 5px 1px #464646;
+        z-index: 100;
+        padding: 2rem 1rem;
+    }
+
+    .rMnu ul{
+        list-style: none;
+    }
+
+    .rMnu #tm{
+        list-style: none;
+        border-bottom: 1px solid #464646;
+        margin-bottom: 2rem;
+    }
+
+    .rMnu ul li{
+        margin-bottom: 1rem;
+    }
+
+    .rMnu ul li a{
+        color: #484848;
+        text-decoration: none;
+    }
+
+/* Gestion des sous menus */
+
+main{
+    width: 100vw;
+    height: 100vh;
+    background-color: aqua;
+    z-index: 90;
+}
+
+nav{
+    position: sticky;
+    top: 21vh;
+    background-color: yellow;
+}
+
