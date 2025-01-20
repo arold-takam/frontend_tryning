@@ -1,10 +1,456 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Amazon.com</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <script defer src="../js/index.js"></script>
 </head>
 <body>
+    <header id="haut">
+        <div class="prim" id="prim">
+            <a href="#"><img src="../images/logo.png" alt="logo"></a>
+            <div class="camer" id="camer">
+                <figure><img src="../images/map.png" alt="map"></figure>
+                <figcaption>
+                    <span>Livrer  <b>au Cameroun</b></span>
+                    <!-- <img src="../images/arrowDown.png" alt=""> -->
+                </figcaption>
+            </div>
+            <div class="find" id="find">
+                <select name="category" id="category">
+                    <option value="1" selected>Tous</option>
+                    <option value="2">Technology</option>
+                    <option value="3">Commerce</option>
+                    <option value="4">Art & Design</option>
+                </select>
+                <input type="search" placeholder="Rechercher sur Amazon">
+                <button><img src="../images/search.png" alt="search"></button>
+            </div>
+            <button class="language" id="language">
+                <figure><img src="../images/translate.png" alt="globe"></figure>
+                <span>
+                    <b>FR</b>
+                    <figure><img src="../images/TriangleBas.png" alt="TriangleBas"></figure>
+                </span>
+            </button>
+            <button class="connect">
+                <p>Bonjour, connectez-vous</p>
+                <span>
+                    <b>Compte et listes</b>
+                    <figure><img src="../images/TriangleBas.png" alt="TriangleBas"></figure>
+                </span>
+            </button>
+            <button class="cmd">
+                <p>Retour</p>
+                <b>& commandes</b>
+            </button>
+            <button class="shop">
+                <figure><img src="../images/shop.png" alt="shop"></figure>
+            </button>
+        </div>
+        <nav>
+            <button>
+                <figure><img src="../images/menu.png" alt="menu"></figure>
+                <b>Tous</b>
+            </button>
+            <button><a href="#">Offres</a></button>
+            <button><a href="#">Les bases d'Amazon</a></button>
+            <button><a href="#">Diffusion en direct</a></button>
+            <button><a href="#">Meilleures ventes</a></button>
+            <button><a href="#">Musique</a></button>
+            <button><a href="#">Video</a></button>
+            <button><a href="#">Livres</a></button>
+            <button><a href="#">Maison</a></button>
+            <button><a href="#">Nouveautes</a></button>
+            <button><a href="#">PC</a></button>
+            <button><a href="#">Sante et menage</a></button>
+        </nav>
+    </header>
+    <main>
+        <div class="carousel" id="carousel">
+            <ul>
+                <li>
+                    <figure><img src="https://m.media-amazon.com/images/I/71VcGrxQRBL._SX3000_.jpg" alt=""></figure>
+                </li>
+                <li>
+                    <figure><img src="https://m.media-amazon.com/images/I/71Ie3JXGfVL._SX3000_.jpg" alt=""></figure>
+                </li>
+                <li>
+                    <figure><img src="https://m.media-amazon.com/images/I/61zAjw4bqPL._SX3000_.jpg" alt=""></figure>
+                </li>
+                <li>
+                    <figure><img src="https://m.media-amazon.com/images/I/61lwJy4B8PL._SX3000_.jpg" alt=""></figure>
+                </li>
+                <li>
+                    <figure><img src="https://m.media-amazon.com/images/I/81KkrQWEHIL._SX3000_.jpg" alt=""></figure>
+                </li>
+            </ul>
 
+            <button class="btn" id="left">&#10094;</button>
+            <button class="btn" id="right">&#10095;</button>
+        </div>
+        <div class="mosaic" id="mosaic">
+            <ul>
+                <li>
+                    <h3>Accessoires de jeu</h3>
+                    <div class="product">
+                        <figure>
+                            <div class="im"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/June/Fuji_Quad_Headset_1x._SY116_CB667159060_.jpg" alt=""></div>
+                            <figcaption>Casques d'ecoute</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="im"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/June/Fuji_Quad_Keyboard_1x._SY116_CB667159063_.jpg" alt=""></div>
+                            <figcaption>Claviers</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="im"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/June/Fuji_Quad_Mouse_1x._SY116_CB667159063_.jpg" alt=""></div>
+                            <figcaption>Souris d'ordinateur</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="im"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/June/Fuji_Quad_Chair_1x._SY116_CB667159060_.jpg" alt=""></div>
+                            <figcaption>Chaises</figcaption>
+                        </figure>
+                    </div>
+                    <a href="#">Voir plus</a>
+                </li>
+                <li>
+                    <h3>Achetez les essentiels pour votre maison</h3>
+                    <div class="product">
+                        <figure>
+                            <div class="im"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BAU2024Sept/CleaningTool_1x._SY116_CB563137408_.jpg" alt=""></div>
+                            <figcaption>Outils de nettoyage</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="im"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BAU2024Sept/HomeStorage_1x._SY116_CB563137408_.jpg" alt=""></div>
+                            <figcaption>Stockage a domicile</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="im"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BAU2024Sept/HomeDecor_1x._SY116_CB563137408_.jpg" alt=""></div>
+                            <figcaption>Decoration d'interieur</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="im"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/BAU2024Sept/Bedding_1x._SY116_CB563137408_.jpg" alt=""></div>
+                            <figcaption>Literie</figcaption>
+                        </figure>
+                    </div>
+                    <a href="#">Decouvrez-en plus dans Acceuil</a>
+                </li>
+                <div class="only">
+                    <h3>Achetez les essentiels pour votre maison</h3>
+                    <div class="product">
+                        <figure>
+                            <div class="im"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/Stores-Gaming/FinalGraphics/Fuji_Gaming_store_Dashboard_card_1x_EN._SY304_CB564799420_.jpg" alt=""></div>
+                            <figcaption>Outils de nettoyage</figcaption>
+                        </figure>
+                    </div>
+                    <a href="#">Decouvrez-en plus dans Acceuil</a>
+                </div>
+                <li>
+                    <h3>Achetez les essentiels pour votre maison</h3>
+                    <div class="product">
+                        <figure>
+                            <div class="im"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2023/LuxuryStores/Spring-23/GW/Quad_Cards/Spring/LSS23_SPRING_DT_CAT_CARD_2_x1._SY116_CB595261253_.jpg" alt=""></div>
+                            <figcaption>Outils de nettoyage</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="im"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2023/LuxuryStores/Spring-23/GW/Quad_Cards/Spring/LSS23_SPRING_DT_CAT_CARD_3_x1._SY116_CB595261253_.jpg" alt=""></div>
+                            <figcaption>Stockage a domicile</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="im"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2023/LuxuryStores/Spring-23/GW/Quad_Cards/Spring/LSS23_SPRING_DT_CAT_CARD_1_x1._SY116_CB595261253_.jpg" alt=""></div>
+                            <figcaption>Decoration d'interieur</figcaption>
+                        </figure>
+                        <figure>
+                            <div class="im"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2023/LuxuryStores/Spring-23/GW/Quad_Cards/Spring/LSS23_SPRING_DT_CAT_CARD_4_x1._SY116_CB595261253_.jpg" alt=""></div>
+                            <figcaption>Literie</figcaption>
+                        </figure>
+                    </div>
+                    <a href="#">Decouvrez-en plus dans Acceuil</a>
+                </li>
+            </ul>
+        </div>
+        <div class="best">
+            <figcaption>Les meilleurs choix pour le Cameroun</figcaption>
+            <div class="scrol" id="scrol">
+                <ul>
+                    <li>
+                        <figure><img src="https://m.media-amazon.com/images/I/61miFN7sKAL._AC_SY200_.jpg" alt=""></figure>
+                    </li>
+                    <li>
+                        <figure><img src="https://m.media-amazon.com/images/I/71Joo4OMaJL._AC_SY200_.jpg" alt=""></figure>
+                    </li>
+                    <li>
+                        <figure><img src="https://m.media-amazon.com/images/I/51RqdBa-uaL._AC_SY200_.jpg" alt=""></figure>
+                    </li>
+                    <li>
+                        <figure><img src="https://m.media-amazon.com/images/I/61TVMGeqXGL._AC_SY200_.jpg" alt=""></figure>
+                    </li>
+                    <li>
+                        <figure><img src="https://m.media-amazon.com/images/I/614zy21bM3L._AC_SY200_.jpg" alt=""></figure>
+                    </li>
+                    <li>
+                        <figure><img src="https://m.media-amazon.com/images/I/71sYUUP8UPS._AC_SY200_.jpg" alt=""></figure>
+                    </li>
+                    <li>
+                        <figure><img src="https://m.media-amazon.com/images/I/81htrUs4mwL._AC_SY200_.jpg" alt=""></figure>
+                    </li>
+                    <li>
+                        <figure><img src="https://m.media-amazon.com/images/I/61fu4m4N-xL._AC_SY200_.jpg" alt=""></figure>
+                    </li>
+                    <li>
+                        <figure><img src="https://m.media-amazon.com/images/I/81RnmZtQIJL._AC_SY200_.jpg" alt=""></figure>
+                    </li>
+                    <li>
+                        <figure><img src="https://m.media-amazon.com/images/I/71XxITdBC2L._AC_SY200_.jpg" alt=""></figure>
+                    </li>
+                    <li>
+                        <figure><img src="https://m.media-amazon.com/images/I/61iaO-kcHDL._AC_SY200_.jpg" alt=""></figure>
+                    </li>
+                    <li>
+                        <figure><img src="https://m.media-amazon.com/images/I/71MskQNxHrL._AC_SY200_.jpg" alt=""></figure>
+                    </li>
+                </ul>
+
+                <button class="btn" id="left">&#10094;</button>
+                <button class="btn" id="right">&#10095;</button>
+            </div>
+        </div>
+        <div class="wanted">
+            <figcaption>Le plus recherche dans les jeux video</figcaption>
+            <div class="scrol" id="scrol">
+                <ul>
+                    <li>
+                        <figure><img src="https://m.media-amazon.com/images/I/51XjIdO0a5L._AC_SY200_.jpg" alt=""></figure>
+                    </li>
+                    <li>
+                        <figure><img src="https://m.media-amazon.com/images/I/71wpE+ZIehL._AC_SY200_.jpg" alt=""></figure>
+                    </li>
+                    <li>
+                        <figure><img src="https://m.media-amazon.com/images/I/71Cgu-PiP6L._AC_SY200_.jpg" alt=""></figure>
+                    </li>
+                    <li>
+                        <figure><img src="https://m.media-amazon.com/images/I/61tWTfjqlOL._AC_SY200_.jpg" alt=""></figure>
+                    </li>
+                    <li>
+                        <figure><img src="https://m.media-amazon.com/images/I/61-brviSA9L._AC_SY200_.jpg" alt=""></figure>
+                    </li>
+                    <li>
+                        <figure><img src="https://m.media-amazon.com/images/I/81gTTc2IpCL._AC_SY200_.jpg" alt=""></figure>
+                    </li>
+                    <li>
+                        <figure><img src="https://m.media-amazon.com/images/I/715w7purSbL._AC_SY200_.jpg" alt=""></figure>
+                    </li>
+                    <li>
+                        <figure><img src="https://m.media-amazon.com/images/I/81LLoGOJ9RL._AC_SY200_.jpg" alt=""></figure>
+                    </li>
+                    <li>
+                        <figure><img src="https://m.media-amazon.com/images/I/41ECK5cY-2L._AC_SY200_.jpg" alt=""></figure>
+                    </li>
+                    <li>
+                        <figure><img src="https://m.media-amazon.com/images/I/81CpCNlyO1L._AC_SY200_.jpg" alt=""></figure>
+                    </li>
+                    <li>
+                        <figure><img src="https://m.media-amazon.com/images/I/71AiHrJgO5L._AC_SY200_.jpg" alt=""></figure>
+                    </li>
+                    <li>
+                        <figure><img src="https://m.media-amazon.com/images/I/718+3ZWokmL._AC_SY200_.jpg" alt=""></figure>
+                    </li>
+                </ul>
+
+                <button class="btn" id="left" aria-label="Defiler vers la gauche">&#10094;</button>
+                <button class="btn" id="right" aria-label="Defiler vers la droite">&#10095;</button>
+            </div>
+        </div>
+        <div class="cta1" id="cta1">
+            <h2>Connectez-vous pour la meilleure experience</h2>
+            <button>Connectez-vous en tout securite</button>
+            <a href="#">Creer un compte</a>
+        </div>
+    </main>
+    <footer>
+        <div class="up">
+            <a href="#haut">Retour en haut</a>
+        </div>
+        <div class="foot1">
+            <ul>
+                <p>Apprenez a nous connaitre</p>
+                <li><a href="#">Carrieres</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">A propos d'Amazone</a></li>
+                <li><a href="#">Relations avec les investisseurs</a></li>
+                <li><a href="#">Appareils Amazon</a></li>
+                <li><a href="#">Amazon Science</a></li>
+            </ul>
+            <ul>
+                <p>Gagnez de l'argent avec nous</p>
+                <li><a href="#">Vendre des produits sur Amazon</a></li>
+                <li><a href="#">Vendre sur Amazon Business</a></li>
+                <li><a href="#">Vendre des applications sur Amazon</a></li>
+                <li><a href="#">Devenir un affilie</a></li>
+                <li><a href="#">Faites la publicite de vos produits
+                    <br>Auto-publiez avec nous
+                    <br>Hebergez un Amazon Hub
+                    en savoir plus <br>>Gagnez de l'argent avec nous
+                </a></li>
+            </ul>
+            <ul>
+                <p>Produits de paiement Amazon</p>
+                <li><a href="#">Carte de visite Amazon</a></li>
+                <li><a href="#">Achetez avec des points</a></li>
+                <li><a href="#">Rechargez votre solde</a></li>
+                <li><a href="#">Convertisseur de devises</a></li>
+            </ul>
+            <ul>
+                <p>Laissez-nous vous aidez</p>
+                <li><a href="#">Amazon et le COVID-19</a></li>
+                <li><a href="#">Votre compte</a></li>
+                <li><a href="#">Vos commandes</a></li>
+                <li><a href="#">Tarifs et politiques d'expedition</a></li>
+                <li><a href="#">Retours et remplacements</a></li>
+                <li><a href="#">Gerez votre contenu et vos appareils</a></li>
+                <li><a href="#">Aide</a></li>
+            </ul>
+        </div>
+        <div class="foot2">
+            <div class="logo">
+                <a href="#"><img src="../images/logo.png" alt="logo"></a>
+            </div>
+            <div class="btn">
+                <button>
+                    <figure><img src="../images/world.png" alt=""></figure>
+                    <figcaption>Anglais</figcaption>
+                    <figure><img src="../images/upDown.png" alt=""></figure>
+                </button>
+                <button>$ USD - Dollar americain</button>
+                <button>
+                    <figure><img src="../images/camer.png" alt=""></figure>
+                    <figcaption>Cameroun</figcaption>
+                </button>
+            </div>
+        </div>
+        <div class="last">
+            <div class="list">
+                <ul>
+                    <p>Musique d'Amazon</p>
+                    <li><a href="#">Diffusez des millionds de chansons</a></li>
+                </ul>
+                <ul>
+                    <p>Plubicite Amazon</p>
+                    <li><a href="#">Ateignez les clients partout ounils passent leur temps</a></li>
+                </ul>
+                <ul>
+                    <p>18h</p>
+                    <li><a href="#">Faites des affaires sur les marques de mode</a></li>
+                </ul>
+                <ul>
+                    <p>AbeBooks</p>
+                    <li><a href="#">Livres, art et objets de collection</a></li>
+                </ul>
+                <ul>
+                    <p>ACX</p>
+                    <li><a href="#">La publicite de livres audio en toute securite</a></li>
+                </ul>
+                <ul>
+                    <p>Vendre sur Amazon</p>
+                    <li><a href="#">Demarrer un compte vendeur</a></li>
+                </ul>
+                <ul>
+                    <p>Veeqo</p>
+                    <li><a href="#">logiciel de gestion des stocks d'expeditions</a></li>
+                </ul>
+                <ul>
+                    <p>Amazon Business</p>
+                    <li><a href="#">Tout pour votre entreprise</a></li>
+                </ul>
+                <ul>
+                    <p>Amazon Global</p>
+                    <li><a href="#">Expedier des commandes a l'internatinal</a></li>
+                </ul>
+                <ul>
+                    <p>Services a domicile</p>
+                    <li><a href="#">Des professionels experimentes et une garantie de satisfaction</a></li>
+                </ul>
+                <ul>
+                    <p>Amazon Web Services</p>
+                    <li><a href="#">Services de Cloud Computing evolutifs</a></li>
+                </ul>
+                <ul>
+                    <p>Audible</p>
+                    <li><a href="#">Ecoutez des livres et des performances audio originales</a></li>
+                </ul>
+                <ul>
+                    <p>Mojo au box-office</p>
+                    <li><a href="#">Rechercher des donnees sur le box-office des films</a></li>
+                </ul>
+                <ul>
+                    <p>Goodreads</p>
+                    <li><a href="#">Critiques et recommandations de livres</a></li>
+                </ul>
+                <ul>
+                    <p>IMDb</p>
+                    <li><a href="#">Films, TV et celebrites</a></li>
+                </ul>
+                <ul>
+                    <p>IMDbPro</p>
+                    <li><a href="#">Obtenez les informations dont les proffessionnels du divertissement ont besoin</a></li>
+                </ul>
+                <ul>
+                    <p>Edition directe Kindle</p>
+                    <li><a href="#">l'edition numerique et imprimee independante simplifiee</a></li>
+                </ul>
+                <ul>
+                    <p>Prime Video Direct</p>
+                    <li><a href="#">La distribtution de videos simplifiee</a></li>
+                </ul>
+                <ul>
+                    <p>Boutique Bop</p>
+                    <li><a href="#">Marques de mode de createurs</a></li>
+                </ul>
+                <ul>
+                    <p>Ouah !</p>
+                    <li><a href="#">Affaires et manigances</a></li>
+                </ul>
+                <ul>
+                    <p>Zappos</p>
+                    <li><a href="#">Chaussures et vetements</a></li>
+                </ul>
+                <ul>
+                    <p>Anneau</p>
+                    <li><a href="#">Systemes de securite pour la maison intelligente</a></li>
+                </ul>
+                <ul>
+                    <p>WI-FI eero</p>
+                    <li><a href="#">Diffusez des videos 4K dans chaque piece</a></li>
+                </ul>
+                <ul>
+                    <p>Clignoter</p>
+                    <li><a href="#">Securite intelligente pour chaque maison</a></li>
+                </ul>
+                <ul>
+                    <p>Application Neighbors</p>
+                    <li><a href="#">Alertes de criminalite et de securite en temps reel</a></li>
+                </ul>
+                <ul>
+                    <p>Coffrets d'abonnement Amazon</p>
+                    <li><a href="#">Les meilleures boites d'abonnement-directement chez vous</a></li>
+                </ul>
+                <ul>
+                    <p>Pilulier</p>
+                    <li><a href="#">La pharmacie simplifiee</a></li>
+                </ul>
+            </div>
+            <div class="cop">
+                <ul>
+                    <li><a href="#">Conditions d'utilistion</a></li>
+                    <li><a href="#">Avis de confidentialite</a></li>
+                    <li><a href="#">Divulgation de la confidentialite des donnees de sante des consommateurs</a></li>
+                    <li><a href="#">Vos choix en matiere de confidentialite des annonces</a></li>
+                </ul>
+                <span>&copy;1996-2025, Amazon.com, inc ou ses filiales</span>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
