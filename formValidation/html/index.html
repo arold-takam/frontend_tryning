@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validator.com</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="../js/index.js" defer></script>
+</head>
+<body>
+    <aside>
+        <div class="sun"></div>
+    </aside>
+    <main>
+        <header>
+            <div class="light"></div>
+            <button id="btn">
+                <div class="toggle"></div>
+            </button>
+            <div class="dark"></div>
+        </header>
+        <section>
+            <fieldset>
+                <caption>
+                    <h1>Loging</h1>
+                </caption>
+                <form action="">
+                    <div>
+                        <div class="put">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" placeholder="Enter your name">
+                        </div>
+                        <div class="put">
+                            <label for="mail">Email</label>
+                            <input type="email" name="mail" id="mail" placeholder="Enter your Email">
+                        </div>
+                        <div class="put">
+                            <label for="pass">Password</label>
+                            <input type="password" name="pass" id="pass" placeholder="Enter your password">
+                        </div>
+                        <div class="last">
+                            <div class="confirm">
+                                <label for="confirm">Confirm your password</label>
+                                <input type="password" name="confirm" id="confirm" placeholder="Confirm password">
+                            </div>
+                            <div class="right">
+                                <div class="gender">
+                                    <label for="sex">Gender: </label>
+                                    <div class="male">
+                                        <input type="radio" name="sex" id="male" value="male">
+                                        <label for="male">M</label>
+                                    </div>
+                                    <div class="female">
+                                        <input type="radio" name="sex" id="female" value="female">
+                                        <label for="female">F</label>
+                                    </div>
+                                </div>
+                                <div class="terms">
+                                    <input type="checkbox" id="terms" name="terms">
+                                    <label for="terms">I agree with the terms and conditions</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="submit" value="SUBMIT">
+                </form>
+            </fieldset>
+            <div class="valid">
+                <h3>Filling's constraints</h3>
+                <div class="condition" id="condition">
+                    <div class="circel"></div>
+                    <p></p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

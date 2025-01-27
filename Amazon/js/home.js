@@ -22,8 +22,8 @@ let body = document.querySelector('body');
 
 show.addEventListener('click', () => {
     menu.style.display='flex';
-    menu.style.transition='all 1s ease';
-    menu.style.transform='translateX(0rem)';
+    // menu.style.transition='all 1s ease';
+    // menu.style.transform='translateX(0rem)';
     body.classList.add('no-scroll');
     
 });
@@ -35,7 +35,7 @@ show.addEventListener('click', () => {
 // });
 
 close.addEventListener('click', () => {
-    menu.style.transform='translateX(-100%)';
+    // menu.style.transform='translateX(-100%)';
     body.classList.remove('no-scroll');
 });
 

@@ -1,0 +1,288 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+img{
+    display: block;
+}
+
+body{
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(134deg, #ffffff 5.9%, #00c8ff 48.88%);
+
+    &> aside{
+        width: 20vw;
+        height: 100vh;
+        padding: 2rem 2rem;
+
+        &> .sun{
+            width: 8rem;
+            height: 8rem;
+            background-color:  #ffc800;
+            border-radius: 50rem;
+            border: 1px solid rgba(255,255,255,0.08);
+            /* box-shadow: 0px 0px 50px 100px rgba(251,197,0,0.61); */
+        }
+    }
+
+    &> main{
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+        width: 80vw;
+        height: 100vh;
+
+        &> header{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            column-gap: 0.5rem;
+            width: 100%;
+            height: 3rem; 
+            padding: 1rem;
+
+            &> .light{
+                width: 2rem;
+                height: 2rem;
+                background-color: #ffc800;
+                border-radius: 50rem;
+            }
+
+            &> button{
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                width: 4rem;
+                height: 1.15rem;
+                border-radius: 50rem;
+                border: 1px solid white;
+                background-color: #00c8ff;;
+                padding: 0.2rem;
+
+                &> .toggle{
+                    width: 1rem;
+                    height: 100%;
+                    /* background-color: black; */
+                    border-radius: 100rem;
+                    border: 3px solid white;
+                }
+            }
+
+            &> .dark{
+                width: 2rem;
+                height: 2rem;
+                background: linear-gradient(90deg, #ffffff 0%, #000000 100%);
+                border-radius: 50rem;
+            }
+        }
+
+        &> section{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: 1rem;
+            width: 80vw;
+            height: 97vh;
+            padding: 1rem 1rem;
+
+            &> fieldset{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                row-gap: 0.5rem;
+                border: none;
+
+                &> h1{
+                    font-size: xx-large;
+                }
+
+                &> form{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    row-gap: 0.5rem;
+                    border-radius: 32px;
+                    background: url(../images/sky.jpeg);
+                    border: 1px solid rgba(255, 255, 255, 0.596);
+                    padding: 1rem 1rem;
+
+                    &> div{
+                        display: flex;
+                        flex-direction: column;
+                        row-gap: 0.5rem;
+                        width: 24rem;
+                        height: 100%;
+                        border-radius: 32px;
+                        padding: 1rem 1rem;
+
+                        &> .put{
+                            display: flex;
+                            flex-direction: column;
+                            row-gap: 0.4rem;
+    
+                            &> label{
+                                font-size: large;
+                                font-weight: 570;
+                                color: white;
+                            }
+    
+                            &> input{
+                                height: 44px;
+                                font-size: medium;
+                                font-weight: 500;
+                                text-align: center;
+                                color: rgba(0,0,0,0.51);
+                                background: rgba(255,255,255,0.61);
+                                border-radius: 24px;
+                                border: 1px solid rgba(0,0,0,0.31);
+                                padding: 1rem 1rem;
+                            }
+                        }
+    
+                        &> .last{
+                            display: flex;
+                            align-items: flex-start;
+                            column-gap: 0.5rem;
+    
+                            &> .confirm{
+                                display: flex;
+                                flex-direction: column;
+                                row-gap: 0.4rem;
+                                width: 50%;
+        
+                                &> label{
+                                    font-size: large;
+                                    font-weight: 570;
+                                    color: white;
+                                }
+        
+                                &> input{
+                                    height: 44px;
+                                    font-size: medium;
+                                    font-weight: 500;
+                                    text-align: center;
+                                    color: rgba(0,0,0,0.51);
+                                    background: rgba(255,255,255,0.61);
+                                    border-radius: 24px;
+                                    border: 1px solid rgba(0,0,0,0.31);
+                                    padding: 1rem 1rem;
+                                }
+                            }
+    
+                            &> .right{
+                                display: flex;
+                                flex-direction: column;
+                                row-gap: 1rem;
+                                width: 50%;
+    
+                                &> .gender{
+                                    display: flex;
+                                    align-items: center;
+                                    column-gap: 1rem;
+                                    font-size: medium;
+                                    font-weight: 570;
+                                    color: white;
+                                }
+    
+                                &> .terms{
+                                    font-size: medium;
+                                    font-weight: 570;
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+                    &> input{
+                        width: 8rem;
+                        color: white;
+                        font-size: large;
+                        font-weight: 570;
+                        border-radius: 16px;
+                        border: 1px solid white;
+                        background-color: #008fff;
+                        padding: 0.5rem 0.5rem;
+                    }
+                }
+            }
+
+            /* &> fieldset::after{
+                position: absolute;
+                top: 50%;
+                right: 29vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                content: ">";
+                font-size: xx-large;
+                font-weight: bolder;
+                background-color: white;
+                padding: 0.5rem 0.5rem;
+            } */
+
+            &> .valid{
+                display: flex;
+                flex-direction: column;
+                row-gap: 1rem;
+                background-color: rgba(255,255,255,0.37);
+                border-radius: 24px;
+                padding: 1rem;
+
+                &> h3{
+                    text-decoration: underline;
+                    font-weight: bold;
+                }
+
+                &> .condition{
+                    display: flex;
+                    align-items: center;
+                    column-gap: 0.5rem;
+
+                    &> .circel{
+                        width: 1rem;
+                        height: 1rem;
+                        border: 1px solid white;
+                        border-radius: 50rem;
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ------------GESTION DU DARK MODE------------------------------------ */
+
+.toggelBtn{
+    display: flex;
+    justify-content: flex-end;
+    background-color: #302e68;
+}
+
+.togglePointcolor{
+    background-color: white;
+}
+
+.bodyColor{
+    background:linear-gradient(134deg, #ffffff 0%, #302e68 46.07%);
+}
+
+.toggleSun{
+    background: linear-gradient(139deg, #dfdfdf 14.61%, #ffffff 49.09%, #ccc3c3 100%);
+    /* box-shadow: none; */
+}
+
+.toggleWhite{
+    color: white;
+}
+
+.circleWhite{
+    border-color: white;
+}

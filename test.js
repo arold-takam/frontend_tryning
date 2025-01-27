@@ -42,3 +42,22 @@ document.body.onload = function () {
     // Appeler displayButtons au chargement initial
     displayButtons();
 };
+
+
+// -----------------------TEST DE VALIDATION DE FORMULAIRE------------------
+
+document.getElementById('username').addEventListener('input', function() {
+    var username = this.value;
+    var feedbackDiv = document.getElementById('usernameFeedback');
+    
+    if (username.length === 0) {
+      feedbackDiv.textContent = 'Username is required';
+      feedbackDiv.style.color = 'red';
+    } else if (username.length < 3) {
+      feedbackDiv.textContent = 'Username must have at least 3 characters';
+      feedbackDiv.style.color = 'orange';
+    } else {
+      feedbackDiv.textContent = 'Username is valid';
+      feedbackDiv.style.color = 'green';
+    }
+  });
